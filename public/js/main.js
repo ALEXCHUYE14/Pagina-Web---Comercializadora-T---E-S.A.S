@@ -2,11 +2,13 @@
    INIT — arranque de la aplicación (se carga de último)
    ===================================================================== */
 /* ---------------- Init ---------------- */
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 lucide.createIcons();
 applyI18n();
-loadCatalog();
-calc();
+// loadCatalog()/calc() solo aplican en las páginas que tienen catálogo o calculadora.
+if (typeof loadCatalog === 'function' && document.getElementById('catalogGrid')) loadCatalog();
+if (typeof calc === 'function' && document.getElementById('calcGarment')) calc();
 
 // Hero background video: skip/pause on reduced-motion or data-saver, avoid
 // unhandled play() rejections on browsers that block autoplay, and pause

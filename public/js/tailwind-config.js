@@ -6,9 +6,9 @@
       theme: {
         extend: {
           colors: {
-            /* Paleta blanco / gris / negro — sin azul, alineada a la identidad de marca. */
-            navy:   { DEFAULT: '#171717', 900: '#171717', 800: '#262626' },
-            accent: { DEFAULT: '#171717', bright: '#404040', 700: '#171717' },
+            /* Paleta blanco / gris suave — sin azul, tono neutro (zinc) más cálido que el negro puro. */
+            navy:   { DEFAULT: '#27272A', 900: '#27272A', 800: '#3F3F46' },
+            accent: { DEFAULT: '#52525B', bright: '#71717A', 700: '#52525B' },
             slate:  { 600: '#525252', 500: '#737373' },
             surface:{ DEFAULT: '#FFFFFF', muted: '#F7F7F7' },
             ok:     '#10B981',

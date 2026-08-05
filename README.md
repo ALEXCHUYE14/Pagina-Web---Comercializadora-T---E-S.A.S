@@ -2,10 +2,10 @@
 
 🔗 **En vivo:** https://tyecomercializadora.vercel.app
 
-Landing interactiva y responsiva para **Comercializadora T&E S.A.S.**, empresa colombiana de
-dotación empresarial (uniformes, overoles, ropa de trabajo) y materia prima textil. Catálogo con
-selección de talla, calculadora de dotación y cotización directa por **WhatsApp** — sin carrito de
-compras ni pasarela de pagos en línea. Disponible en español e inglés.
+Sitio web multi-página para **Comercializadora T&E S.A.S.**, empresa colombiana de dotación
+empresarial (uniformes, overoles, ropa de trabajo) y materia prima textil. Catálogo con selección
+de talla, calculadora de dotación y cotización directa por **WhatsApp** — sin carrito de compras ni
+pasarela de pagos en línea. Disponible en español e inglés.
 
 ---
 
@@ -16,9 +16,16 @@ comercializadora-tye/
 ├── README.md                     Este archivo
 ├── .env.example                  Plantilla de variables (claves Supabase)
 ├── public/
-│   ├── index.html                Markup de la landing (sin lógica embebida)
+│   ├── index.html                Home: hero, pilares, especialidades, soluciones B2B, testimonios
+│   ├── catalogo.html             Catálogo completo + guía de tallas + cómo hacer tu pedido
+│   ├── nuestro-trabajo.html      Galería de producción + cómo trabajamos
+│   ├── calculadora.html          Calculadora de dotación + metodología + FAQ
+│   ├── recursos.html             Guías técnicas (6 artículos) con modal de lectura
+│   ├── garantia.html             Pilares de calidad + proceso de control + FAQ
+│   ├── contacto.html             Formulario de contacto + FAQ + política de datos
 │   ├── PORTAFOLIO TE.pdf         Catálogo/portafolio descargable
 │   ├── img/logo.png              Logo oficial de la empresa
+│   ├── img/products/*.jpg        Fotos de producto (generadas con IA, estilo catálogo)
 │   ├── sitemap.xml               Mapa del sitio (actualiza el dominio antes de publicar)
 │   ├── robots.txt                Directivas para buscadores
 │   ├── css/
@@ -86,8 +93,16 @@ comercializadora-tye/
 - Selector de idioma **Español / English** persistente (localStorage).
 - SEO: metadatos Open Graph, JSON-LD `Organization`, `sitemap.xml` y `robots.txt`.
 - Integraciones opcionales: Google Analytics 4, catálogo en vivo vía Supabase y chat en vivo (Tidio).
-- Mobile-first: menú hamburguesa, botón WhatsApp flotante, tarjetas apilables.
-- Paleta blanco / gris / negro, con imágenes reales de producto extraídas del portafolio de la empresa.
+- Mobile-first: menú hamburguesa, botón WhatsApp flotante estilo píldora, tarjetas apilables.
+- Paleta blanco / azul / navy derivada del logo (`js/tailwind-config.js`), sin negro.
+- Sitio multi-página (7 páginas .html independientes que comparten header/footer duplicados, sin
+  bundler). Cada nav-item del menú lleva a su propia página con más contenido que el resumen del home.
+
+> **Nota para quien edite el JS compartido** (`catalog.js`, `calculator.js`, `ui.js`, `main.js`,
+> `i18n.js`, `articles.js`, `contact.js`, `product-modal.js`): como el mismo script se carga en
+> páginas que no siempre tienen todos los elementos (p. ej. `calculadora.html` no tiene `#catalogGrid`),
+> todo acceso a `document.getElementById(...)` en esos archivos debe ir guardado con una comprobación
+> de existencia (`if (el) ...`) — no asumas que el elemento está en la página actual.
 
 ## Stack
 

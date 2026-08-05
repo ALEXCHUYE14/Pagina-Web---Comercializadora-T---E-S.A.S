@@ -53,18 +53,22 @@ function openProductModal(id) {
   document.getElementById('productModal').classList.remove('hidden');
   lucide.createIcons();
 }
-function closeProductModal() { document.getElementById('productModal').classList.add('hidden'); currentModalProductId = null; }
-document.getElementById('productModalClose').addEventListener('click', closeProductModal);
-document.getElementById('productModal').addEventListener('click', (e) => { if (e.target.id === 'productModal') closeProductModal(); });
-document.getElementById('productModalInc').addEventListener('click', () => {
-  const inp = document.getElementById('productModalMeters');
-  inp.value = Math.max(1, (parseInt(inp.value, 10) || 0) + 1);
-});
-document.getElementById('productModalDec').addEventListener('click', () => {
-  const inp = document.getElementById('productModalMeters');
-  inp.value = Math.max(1, (parseInt(inp.value, 10) || 0) - 1);
-});
-document.getElementById('productModalAdd').addEventListener('click', () => {
+function closeProductModal() { const m = document.getElementById('productModal'); if (m) m.classList.add('hidden'); currentModalProductId = null; }
+
+// Todo lo de abajo solo aplica en la página de catálogo, donde vive el modal de vista rápida.
+const productModalEl = document.getElementById('productModal');
+if (productModalEl) {
+  document.getElementById('productModalClose').addEventListener('click', closeProductModal);
+  productModalEl.addEventListener('click', (e) => { if (e.target.id === 'productModal') closeProductModal(); });
+  document.getElementById('productModalInc').addEventListener('click', () => {
+    const inp = document.getElementById('productModalMeters');
+    inp.value = Math.max(1, (parseInt(inp.value, 10) || 0) + 1);
+  });
+  document.getElementById('productModalDec').addEventListener('click', () => {
+    const inp = document.getElementById('productModalMeters');
+    inp.value = Math.max(1, (parseInt(inp.value, 10) || 0) - 1);
+  });
+  document.getElementById('productModalAdd').addEventListener('click', () => {
   if (!currentModalProductId) return;
   if (!currentModalSize) { toast(t('toast_select_size'), 'warn'); return; }
   const p = CATALOG.find(x => x.id === currentModalProductId);
@@ -78,4 +82,5 @@ document.getElementById('productModalAdd').addEventListener('click', () => {
   ];
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
   closeProductModal();
-});
+  });
+}

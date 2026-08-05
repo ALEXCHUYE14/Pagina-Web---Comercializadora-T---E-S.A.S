@@ -40,6 +40,7 @@ let CATALOG = [];
 /* ---------------- Cargar catálogo (Supabase o fallback) ---------------- */
 function renderCatalogSkeleton() {
   const grid = document.getElementById('catalogGrid');
+  if (!grid) return;
   grid.innerHTML = Array.from({ length: 8 }).map(() => `
     <div class="animate-pulse overflow-hidden rounded-xl border border-slate-200/70 bg-white shadow-sm">
       <div class="aspect-[4/3] bg-slate-200"></div>
@@ -62,8 +63,10 @@ async function loadCatalog() {
 
 /* ---------------- Render del catálogo con filtros ---------------- */
 function renderCatalog() {
-  const category = document.getElementById('fType').value;
-  const stock = document.getElementById('fStock').value;
+  const grid0 = document.getElementById('catalogGrid');
+  if (!grid0) return; // esta página no tiene catálogo
+  const category = document.getElementById('fType') ? document.getElementById('fType').value : '';
+  const stock = document.getElementById('fStock') ? document.getElementById('fStock').value : '';
   const q     = (window.__heroQuery || '').toLowerCase().trim();
 
   const list = CATALOG.filter(p =>

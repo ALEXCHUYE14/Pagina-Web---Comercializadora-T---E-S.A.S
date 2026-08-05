@@ -14,14 +14,19 @@ function toast(msg, type='ok') {
   toastTimer = setTimeout(() => t.classList.add('opacity-0','translate-y-4'), 3400);
 }
 
-/* ---------------- Filtros ---------------- */
-document.getElementById('fType').addEventListener('change', renderCatalog);
-document.getElementById('fStock').addEventListener('change', renderCatalog);
+/* ---------------- Filtros (solo existen en la página de catálogo) ---------------- */
+const fTypeEl = document.getElementById('fType');
+const fStockEl = document.getElementById('fStock');
+if (fTypeEl) fTypeEl.addEventListener('change', renderCatalog);
+if (fStockEl) fStockEl.addEventListener('change', renderCatalog);
 
 /* ---------------- Menú móvil ---------------- */
 const drawer = document.getElementById('drawer');
-document.getElementById('menuBtn').addEventListener('click', () => drawer.classList.toggle('hidden'));
-drawer.querySelectorAll('[data-close]').forEach(a => a.addEventListener('click', () => drawer.classList.add('hidden')));
+const menuBtnEl = document.getElementById('menuBtn');
+if (drawer && menuBtnEl) {
+  menuBtnEl.addEventListener('click', () => drawer.classList.toggle('hidden'));
+  drawer.querySelectorAll('[data-close]').forEach(a => a.addEventListener('click', () => drawer.classList.add('hidden')));
+}
 
 /* ---------------- Counters animados ---------------- */
 function animateCounters() {

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title id="pageTitle">Comercializadora T&E S.A.S. — Dotación Empresarial y Textiles</title>
+  <title id="pageTitle" data-i18n="page_title_home">Comercializadora T&E S.A.S. — Dotación Empresarial y Textiles</title>
   <meta id="metaDescription" name="description" content="Uniformes, dotación industrial y materia prima textil de alta gama, confeccionados a la medida con garantía de calidad y logística integral en Colombia." />
-  <meta name="theme-color" content="#171717" />
+  <meta name="theme-color" content="#27272A" />
   <link rel="icon" type="image/png" href="img/logo.png" />
 
   <link id="canonicalLink" rel="canonical" href="https://tyecomercializadora.vercel.app/" />
@@ -35,10 +35,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- Supabase JS (opcional: rellena las claves más abajo para cargar el catálogo en vivo desde base de datos) -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <!-- jsPDF (generación de fichas técnicas en PDF, 100% desde el navegador) -->
-  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 
   <!-- =====================================================================
        CONFIG ANALÍTICA — Google Analytics 4 (opcional).
@@ -97,12 +93,12 @@
 
       <!-- Desktop nav -->
       <nav class="hidden xl:flex items-center gap-5 text-sm font-medium text-slate-600">
-        <a href="#catalogo"  data-i18n="nav_catalogo" class="hover:text-navy transition">Catálogo</a>
-        <a href="#trabajo"   data-i18n="nav_trabajo" class="hover:text-navy transition">Nuestro trabajo</a>
-        <a href="#calculadora" data-i18n="nav_calculadora" class="hover:text-navy transition">Calculadora</a>
-        <a href="#recursos"  data-i18n="nav_recursos" class="hover:text-navy transition">Recursos</a>
-        <a href="#garantia"  data-i18n="nav_garantia" class="hover:text-navy transition">Garantía</a>
-        <a href="#contacto"  data-i18n="nav_contactanos" class="hover:text-navy transition">Contáctanos</a>
+        <a href="catalogo.html"  data-i18n="nav_catalogo" class="hover:text-navy transition">Catálogo</a>
+        <a href="nuestro-trabajo.html"   data-i18n="nav_trabajo" class="hover:text-navy transition">Nuestro trabajo</a>
+        <a href="calculadora.html" data-i18n="nav_calculadora" class="hover:text-navy transition">Calculadora</a>
+        <a href="recursos.html"  data-i18n="nav_recursos" class="hover:text-navy transition">Recursos</a>
+        <a href="garantia.html"  data-i18n="nav_garantia" class="hover:text-navy transition">Garantía</a>
+        <a href="contacto.html"  data-i18n="nav_contactanos" class="hover:text-navy transition">Contáctanos</a>
       </nav>
 
       <!-- CTAs -->
@@ -111,7 +107,7 @@
           <button id="langEs" class="rounded-md px-2 py-1 transition">ES</button>
           <button id="langEn" class="rounded-md px-2 py-1 transition">EN</button>
         </div>
-        <a href="#contacto" data-i18n="nav_cotizar" class="hidden sm:inline-flex items-center rounded-lg bg-accent px-4 h-10 text-sm font-semibold text-white hover:bg-accent-bright transition">Cotizar</a>
+        <a href="contacto.html" data-i18n="nav_cotizar" class="hidden sm:inline-flex items-center rounded-lg bg-accent px-4 h-10 text-sm font-semibold text-white hover:bg-accent-bright transition">Cotizar</a>
         <button id="menuBtn" class="xl:hidden grid h-10 w-10 place-items-center rounded-lg text-navy hover:bg-surface-muted">
           <i data-lucide="menu" class="h-5 w-5"></i>
         </button>
@@ -122,13 +118,13 @@
   <!-- Mobile drawer -->
   <div id="drawer" class="xl:hidden hidden border-t border-slate-200 bg-white px-4 py-3">
     <nav class="flex flex-col gap-1 text-sm font-medium text-slate-700">
-      <a href="#catalogo"    data-i18n="nav_catalogo" class="rounded-lg px-3 py-2.5 hover:bg-surface-muted" data-close>Catálogo</a>
-      <a href="#trabajo"     data-i18n="nav_trabajo" class="rounded-lg px-3 py-2.5 hover:bg-surface-muted" data-close>Nuestro trabajo</a>
-      <a href="#calculadora" data-i18n="nav_calculadora" class="rounded-lg px-3 py-2.5 hover:bg-surface-muted" data-close>Calculadora</a>
-      <a href="#recursos"    data-i18n="nav_recursos" class="rounded-lg px-3 py-2.5 hover:bg-surface-muted" data-close>Recursos</a>
-      <a href="#garantia"    data-i18n="nav_garantia" class="rounded-lg px-3 py-2.5 hover:bg-surface-muted" data-close>Garantía</a>
-      <a href="#contacto"    data-i18n="nav_contactanos" class="rounded-lg px-3 py-2.5 hover:bg-surface-muted" data-close>Contáctanos</a>
-      <a href="#contacto"    data-i18n="nav_cotizar" class="rounded-lg px-3 py-2.5 font-bold text-accent hover:bg-surface-muted" data-close>Cotizar</a>
+      <a href="catalogo.html"    data-i18n="nav_catalogo" class="rounded-lg px-3 py-2.5 hover:bg-surface-muted" data-close>Catálogo</a>
+      <a href="nuestro-trabajo.html"     data-i18n="nav_trabajo" class="rounded-lg px-3 py-2.5 hover:bg-surface-muted" data-close>Nuestro trabajo</a>
+      <a href="calculadora.html" data-i18n="nav_calculadora" class="rounded-lg px-3 py-2.5 hover:bg-surface-muted" data-close>Calculadora</a>
+      <a href="recursos.html"    data-i18n="nav_recursos" class="rounded-lg px-3 py-2.5 hover:bg-surface-muted" data-close>Recursos</a>
+      <a href="garantia.html"    data-i18n="nav_garantia" class="rounded-lg px-3 py-2.5 hover:bg-surface-muted" data-close>Garantía</a>
+      <a href="contacto.html"    data-i18n="nav_contactanos" class="rounded-lg px-3 py-2.5 hover:bg-surface-muted" data-close>Contáctanos</a>
+      <a href="contacto.html"    data-i18n="nav_cotizar" class="rounded-lg px-3 py-2.5 font-bold text-accent hover:bg-surface-muted" data-close>Cotizar</a>
       <a href="https://wa.me/573142588118" target="_blank" rel="noopener"
          class="mt-2 inline-flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-2.5 text-navy">
          <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4 shrink-0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741 1.021.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.83 9.83 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.412-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.86 11.86 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
@@ -153,11 +149,9 @@
       aria-hidden="true">
       <source src="video/hero-confeccion.mp4" type="video/mp4" />
     </video>
-    <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-navy/55"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/10 to-transparent"></div>
   </div>
   <div class="relative mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
-    <div class="max-w-xl fade-up">
+    <div class="max-w-xl fade-up hero-text-shadow">
       <span class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-semibold tracking-wide text-white backdrop-blur-sm">
         <i data-lucide="shirt" class="h-3.5 w-3.5"></i> <span data-i18n="hero_badge">Dotación empresarial &amp; confección a la medida</span>
       </span>
@@ -169,10 +163,10 @@
       </p>
 
       <div class="mt-8 flex flex-wrap gap-3">
-        <a href="#catalogo" class="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-slate-100 transition">
+        <a href="catalogo.html" class="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-navy hover:bg-slate-100 transition">
           <span data-i18n="hero_cta_catalog">Ver catálogo</span>
         </a>
-        <a href="#contacto" class="inline-flex items-center gap-2 rounded-lg border border-white/30 px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white hover:bg-white/10 transition">
+        <a href="contacto.html" class="inline-flex items-center gap-2 rounded-lg border border-white/30 px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white hover:bg-white/10 transition">
           <i data-lucide="send" class="h-4 w-4"></i> <span data-i18n="hero_cta_quote">Solicitar cotización</span>
         </a>
       </div>
@@ -241,7 +235,7 @@
           <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0 text-accent"></i><span data-i18n="spec_li_chaquetas">Chaquetas de trabajo</span></li>
           <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0 text-accent"></i><span data-i18n="spec_li_chalecos">Chalecos institucionales</span></li>
         </ul>
-        <a href="#catalogo" class="mt-7 inline-flex items-center gap-2 rounded-lg bg-navy px-5 py-3 text-sm font-semibold text-white hover:bg-navy-800 transition">
+        <a href="catalogo.html" class="mt-7 inline-flex items-center gap-2 rounded-lg bg-navy px-5 py-3 text-sm font-semibold text-white hover:bg-navy-800 transition">
           <span data-i18n="spec_cta">Ver todo el catálogo</span> <i data-lucide="arrow-right" class="h-4 w-4"></i>
         </a>
       </div>
@@ -250,165 +244,6 @@
         <img src="img/products/alta-visibilidad.jpg" alt="Ropa de alta visibilidad" class="mt-6 h-40 w-full rounded-xl object-cover shadow-sm sm:h-52" />
         <img src="img/products/chaquetas.jpg" alt="Chaquetas de trabajo" class="h-40 w-full rounded-xl object-cover shadow-sm sm:h-52" />
         <img src="img/products/camisetas-polo.jpg" alt="Camisetas polo" class="mt-6 h-40 w-full rounded-xl object-cover shadow-sm sm:h-52" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================ CATÁLOGO B2B ============================ -->
-<section id="catalogo" class="bg-surface py-16 sm:py-24">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-wrap items-end justify-between gap-4">
-      <div class="max-w-2xl fade-up">
-        <p data-i18n="cat_eyebrow" class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Catálogo de Dotación</p>
-        <h2 data-i18n="cat_title" class="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight">Prendas de trabajo disponibles</h2>
-        <p data-i18n="cat_desc" class="mt-3 text-slate-500">Filtra en tiempo real por categoría y disponibilidad, y solicita tu cotización directo por WhatsApp.</p>
-        <p data-i18n="cat_cop_note" class="mt-1 text-xs text-slate-400">Precios en pesos colombianos (COP) por unidad. IVA no incluido — sujetos a volumen y disponibilidad.</p>
-      </div>
-      <a href="PORTAFOLIO%20TE.pdf" download="Portafolio-Comercializadora-TE.pdf"
-         class="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-4 py-2.5 text-sm font-semibold text-navy hover:bg-surface-muted transition">
-        <i data-lucide="file-down" class="h-4 w-4"></i> <span data-i18n="cat_download_pdf">Descargar catálogo (PDF)</span>
-      </a>
-    </div>
-
-    <!-- Filtros -->
-    <div class="mt-8 grid gap-4 rounded-xl border border-slate-200/70 bg-surface-muted p-4 sm:p-5 sm:grid-cols-2">
-      <div>
-        <label data-i18n="cat_filter_type" class="mb-1.5 block text-xs font-semibold text-slate-600">Categoría de producto</label>
-        <select id="fType" class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none">
-          <option value="" data-i18n="cat_filter_type_all">Todas las categorías</option>
-          <option value="Overoles" data-i18n="cat_overoles">Overoles</option>
-          <option value="Alta Visibilidad" data-i18n="cat_altavisibilidad">Alta Visibilidad</option>
-          <option value="Ropa de Invierno" data-i18n="cat_invierno">Ropa de Invierno</option>
-          <option value="Pantalón Dama" data-i18n="cat_pantalondama">Pantalón Dama</option>
-          <option value="Pantalón Caballero" data-i18n="cat_pantaloncaballero">Pantalón Caballero</option>
-          <option value="Camisas para Caballero" data-i18n="cat_camisas">Camisas para Caballero</option>
-          <option value="Camisetas Polo" data-i18n="cat_polo">Camisetas Polo</option>
-          <option value="Chaquetas" data-i18n="cat_chaquetas">Chaquetas</option>
-          <option value="Chalecos" data-i18n="cat_chalecos">Chalecos</option>
-        </select>
-      </div>
-      <div>
-        <label data-i18n="cat_filter_stock" class="mb-1.5 block text-xs font-semibold text-slate-600">Estado de stock</label>
-        <select id="fStock" class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none">
-          <option value="" data-i18n="cat_filter_stock_all">Todos</option>
-          <option value="in_stock" data-i18n="stock_in">En Stock</option>
-          <option value="on_demand" data-i18n="stock_demand">Sobre Pedido</option>
-          <option value="out_of_stock" data-i18n="stock_out">Agotado</option>
-        </select>
-      </div>
-    </div>
-
-    <p id="catalogCount" class="mt-6 text-xs font-medium text-slate-400"></p>
-
-    <!-- Grid -->
-    <div id="catalogGrid" class="mt-3 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div>
-    <p id="catalogEmpty" data-i18n="cat_empty" class="hidden mt-10 text-center text-sm text-slate-500">No hay telas que coincidan con los filtros seleccionados.</p>
-  </div>
-</section>
-
-<!-- ============================ NUESTRO TRABAJO ============================ -->
-<section id="trabajo" class="bg-surface-muted py-16 sm:py-24">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="max-w-2xl fade-up">
-      <p data-i18n="work_eyebrow" class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Producción propia</p>
-      <h2 data-i18n="work_title" class="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight">Nuestro trabajo</h2>
-      <p data-i18n="work_desc" class="mt-3 text-slate-500">Una muestra de las prendas que confeccionamos y despachamos cada semana desde nuestro taller para empresas en toda Colombia.</p>
-    </div>
-    <div class="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3 fade-up">
-      <figure class="group relative overflow-hidden rounded-xl">
-        <img src="img/products/overoles.jpg" alt="Overoles" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105" />
-        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent p-3 text-xs font-semibold" data-i18n="cat_overoles">Overoles</figcaption>
-      </figure>
-      <figure class="group relative overflow-hidden rounded-xl">
-        <img src="img/products/alta-visibilidad.jpg" alt="Alta Visibilidad" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105" />
-        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent p-3 text-xs font-semibold" data-i18n="cat_altavisibilidad">Alta Visibilidad</figcaption>
-      </figure>
-      <figure class="group relative overflow-hidden rounded-xl">
-        <img src="img/products/ropa-invierno.jpg" alt="Ropa de Invierno" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105" />
-        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent p-3 text-xs font-semibold" data-i18n="cat_invierno">Ropa de Invierno</figcaption>
-      </figure>
-      <figure class="group relative overflow-hidden rounded-xl">
-        <img src="img/products/pantalon-dama.jpg" alt="Pantalón Dama" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105" />
-        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent p-3 text-xs font-semibold" data-i18n="cat_pantalondama">Pantalón Dama</figcaption>
-      </figure>
-      <figure class="group relative overflow-hidden rounded-xl">
-        <img src="img/products/pantalon-caballero.jpg" alt="Pantalón Caballero" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105" />
-        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent p-3 text-xs font-semibold" data-i18n="cat_pantaloncaballero">Pantalón Caballero</figcaption>
-      </figure>
-      <figure class="group relative overflow-hidden rounded-xl">
-        <img src="img/products/camisas-caballero.jpg" alt="Camisas para Caballero" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105" />
-        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent p-3 text-xs font-semibold" data-i18n="cat_camisas">Camisas para Caballero</figcaption>
-      </figure>
-      <figure class="group relative overflow-hidden rounded-xl">
-        <img src="img/products/camisetas-polo.jpg" alt="Camisetas Polo" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105" />
-        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent p-3 text-xs font-semibold" data-i18n="cat_polo">Camisetas Polo</figcaption>
-      </figure>
-      <figure class="group relative overflow-hidden rounded-xl">
-        <img src="img/products/chaquetas.jpg" alt="Chaquetas" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105" />
-        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent p-3 text-xs font-semibold" data-i18n="cat_chaquetas">Chaquetas</figcaption>
-      </figure>
-      <figure class="group relative overflow-hidden rounded-xl">
-        <img src="img/products/chalecos.jpg" alt="Chalecos" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105" />
-        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent p-3 text-xs font-semibold" data-i18n="cat_chalecos">Chalecos</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============================ CALCULADORA DE DOTACIÓN ============================ -->
-<section id="calculadora" class="bg-navy py-16 sm:py-24 text-white">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-10 items-center">
-      <div class="fade-up">
-        <p data-i18n="calc_eyebrow" class="text-xs font-bold uppercase tracking-[0.18em] text-white">Herramienta interactiva</p>
-        <h2 data-i18n="calc_title" class="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight">Calculadora de dotación</h2>
-        <p data-i18n="calc_desc" class="mt-3 text-slate-300">Estima cuántas prendas necesitas para tu equipo según el número de empleados. Envía el resultado directo por WhatsApp.</p>
-        <ul class="mt-6 space-y-3 text-sm text-slate-300">
-          <li class="flex gap-3"><i data-lucide="users" class="h-5 w-5 text-white shrink-0"></i> <span data-i18n="calc_li1">Calcula por número de colaboradores.</span></li>
-          <li class="flex gap-3"><i data-lucide="shirt" class="h-5 w-5 text-white shrink-0"></i> <span data-i18n="calc_li2">Elige la prenda y las unidades por persona.</span></li>
-          <li class="flex gap-3"><i data-lucide="send" class="h-5 w-5 text-white shrink-0"></i> <span data-i18n="calc_li3">Envía el resultado directo por WhatsApp.</span></li>
-        </ul>
-      </div>
-
-      <div class="rounded-xl bg-white p-6 sm:p-8 text-navy shadow-md">
-        <div class="grid gap-5">
-          <div>
-            <label data-i18n="calc_garment_label" class="mb-1.5 block text-xs font-semibold text-slate-600">Prenda a solicitar</label>
-            <select id="calcGarment" class="w-full rounded-lg border border-slate-200 bg-white px-3 py-3 text-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"></select>
-          </div>
-          <div class="grid grid-cols-2 gap-4">
-            <div>
-              <label data-i18n="calc_qty_label" class="mb-1.5 block text-xs font-semibold text-slate-600">Número de empleados</label>
-              <input id="calcQty" type="number" min="1" value="10"
-                     class="w-full rounded-lg border border-slate-200 bg-white px-3 py-3 text-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none" />
-            </div>
-            <div>
-              <label data-i18n="calc_per_employee_label" class="mb-1.5 block text-xs font-semibold text-slate-600">Unidades por empleado</label>
-              <input id="calcPerEmployee" type="number" min="1" value="2"
-                     class="w-full rounded-lg border border-slate-200 bg-white px-3 py-3 text-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none" />
-            </div>
-          </div>
-
-          <div class="rounded-xl bg-surface-muted p-5">
-            <div class="flex items-center justify-between text-sm">
-              <span data-i18n="calc_base" class="text-slate-500">Total de prendas</span>
-              <span id="calcBase" class="font-semibold">20 uds</span>
-            </div>
-            <div class="mt-2 flex items-center justify-between text-sm">
-              <span data-i18n="calc_waste" class="text-slate-500">Precio por unidad</span>
-              <span id="calcWaste" class="font-semibold text-navy">$0</span>
-            </div>
-            <div class="mt-3 border-t border-slate-200 pt-3 flex items-center justify-between">
-              <span data-i18n="calc_total" class="font-semibold">Costo total estimado</span>
-              <span id="calcTotal" class="text-2xl font-extrabold text-accent">$0</span>
-            </div>
-          </div>
-
-          <button id="calcSend" class="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white hover:bg-accent-bright transition">
-            <i data-lucide="send" class="h-4 w-4"></i> <span data-i18n="calc_send_btn">Solicitar por WhatsApp</span>
-          </button>
-        </div>
       </div>
     </div>
   </div>
@@ -445,7 +280,7 @@
             </div>
           </div>
 
-          <a href="#contacto"
+          <a href="contacto.html"
              class="mt-7 inline-flex items-center gap-2 rounded-lg bg-navy px-5 py-3 text-sm font-semibold text-white hover:bg-navy-800 transition">
              <i data-lucide="arrow-right" class="h-4 w-4"></i> <span data-i18n="sol_cta">Solicitar acceso como cliente mayorista</span>
           </a>
@@ -534,158 +369,6 @@
   </div>
 </section>
 
-<!-- ============================ RECURSOS / BLOG ============================ -->
-<section id="recursos" class="bg-surface-muted py-16 sm:py-24">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="max-w-2xl fade-up">
-      <p data-i18n="res_eyebrow" class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Recursos</p>
-      <h2 data-i18n="res_title" class="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight">Guías técnicas para tu confección</h2>
-      <p data-i18n="res_desc" class="mt-3 text-slate-500">Contenido práctico para elegir mejor tus telas, calcular metraje y reducir mermas en producción.</p>
-    </div>
-    <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      <article class="overflow-hidden rounded-xl border border-slate-200/70 bg-white shadow-sm">
-        <div class="p-6">
-          <span class="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-2.5 py-1 text-[11px] font-semibold text-accent"><i data-lucide="book-open" class="h-3.5 w-3.5"></i> <span data-i18n="res_tag_guide">Guía</span></span>
-          <h3 data-i18n="res_1_title" class="mt-3 font-bold leading-snug">¿Qué es el gramaje (GSM) y por qué importa?</h3>
-          <p data-i18n="res_1_excerpt" class="mt-2 text-sm text-slate-500">Cómo elegir el peso correcto de tela según la prenda: de uniformes livianos a chaquetas técnicas.</p>
-          <button data-article="gsm" class="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:underline">
-            <span data-i18n="res_read_more">Leer artículo</span> <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
-          </button>
-        </div>
-      </article>
-      <article class="overflow-hidden rounded-xl border border-slate-200/70 bg-white shadow-sm">
-        <div class="p-6">
-          <span class="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-2.5 py-1 text-[11px] font-semibold text-accent"><i data-lucide="calculator" class="h-3.5 w-3.5"></i> <span data-i18n="res_tag_calc">Producción</span></span>
-          <h3 data-i18n="res_2_title" class="mt-3 font-bold leading-snug">Cómo calcular el metraje correcto para tu lote de producción</h3>
-          <p data-i18n="res_2_excerpt" class="mt-2 text-sm text-slate-500">La fórmula que usamos en nuestra calculadora y por qué siempre conviene incluir un margen de merma.</p>
-          <button data-article="metraje" class="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:underline">
-            <span data-i18n="res_read_more">Leer artículo</span> <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
-          </button>
-        </div>
-      </article>
-      <article class="overflow-hidden rounded-xl border border-slate-200/70 bg-white shadow-sm">
-        <div class="p-6">
-          <span class="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-2.5 py-1 text-[11px] font-semibold text-accent"><i data-lucide="warehouse" class="h-3.5 w-3.5"></i> <span data-i18n="res_tag_storage">Bodega</span></span>
-          <h3 data-i18n="res_3_title" class="mt-3 font-bold leading-snug">Buenas prácticas para almacenar rollos de tela</h3>
-          <p data-i18n="res_3_excerpt" class="mt-2 text-sm text-slate-500">Humedad, luz solar y apilado: los factores que más deterioran tu materia prima y cómo evitarlos.</p>
-          <button data-article="almacenamiento" class="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:underline">
-            <span data-i18n="res_read_more">Leer artículo</span> <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
-          </button>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- Modal de artículo -->
-<div id="articleModal" class="hidden fixed inset-0 z-[70] grid place-items-center bg-navy/60 backdrop-blur-sm p-4">
-  <div class="max-h-[85vh] w-full max-w-xl overflow-y-auto rounded-xl bg-white p-6 sm:p-8 shadow-md">
-    <div class="flex items-start justify-between gap-4">
-      <h3 id="articleModalTitle" class="text-xl font-extrabold text-navy"></h3>
-      <button id="articleModalClose" class="grid h-8 w-8 shrink-0 place-items-center rounded-lg text-slate-400 hover:bg-surface-muted"><i data-lucide="x" class="h-4 w-4"></i></button>
-    </div>
-    <div id="articleModalBody" class="mt-4 space-y-3 text-sm leading-relaxed text-slate-600"></div>
-  </div>
-</div>
-
-<!-- Modal de vista rápida de producto -->
-<div id="productModal" class="hidden fixed inset-0 z-[70] grid place-items-center bg-navy/60 backdrop-blur-sm p-4">
-  <div class="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-xl bg-white shadow-md">
-    <div class="grid sm:grid-cols-2">
-      <div class="relative aspect-square sm:aspect-auto bg-surface-muted">
-        <img id="productModalImg" src="" alt="" class="h-full w-full object-cover" />
-        <span id="productModalStock" class="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-semibold backdrop-blur"></span>
-        <button id="productModalClose" class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-slate-600 hover:bg-white transition">
-          <i data-lucide="x" class="h-4 w-4"></i>
-        </button>
-      </div>
-      <div class="p-6 sm:p-8">
-        <span id="productModalSku" class="text-xs font-semibold text-slate-500"></span>
-        <h3 id="productModalName" class="mt-1 text-2xl font-extrabold text-navy leading-snug"></h3>
-        <div id="productModalSpecs" class="mt-3 flex flex-wrap gap-1.5"></div>
-        <p id="productModalDesc" class="mt-3 text-sm text-slate-500 leading-relaxed"></p>
-        <p class="mt-4"><span id="productModalPrice" class="text-2xl font-extrabold text-accent"></span> <span data-i18n="cat_card_price" class="text-xs text-slate-500">Precio / unidad</span></p>
-        <div class="mt-5">
-          <label data-i18n="modal_size_label" class="text-xs font-semibold text-slate-600">Talla</label>
-          <div id="productModalSizes" class="mt-1.5 flex flex-wrap gap-2"></div>
-        </div>
-        <div class="mt-5 flex items-center gap-2">
-          <label data-i18n="modal_qty_label" class="text-xs font-semibold text-slate-600">Cantidad</label>
-          <button type="button" id="productModalDec" class="grid h-8 w-8 place-items-center rounded-md border border-slate-200 text-slate-500 hover:bg-surface-muted transition"><i data-lucide="minus" class="h-3.5 w-3.5"></i></button>
-          <input id="productModalMeters" type="number" min="1" step="1" value="1" class="w-20 rounded-lg border border-slate-200 px-2 py-2 text-center text-sm focus:border-accent focus:outline-none" />
-          <button type="button" id="productModalInc" class="grid h-8 w-8 place-items-center rounded-md border border-slate-200 text-slate-500 hover:bg-surface-muted transition"><i data-lucide="plus" class="h-3.5 w-3.5"></i></button>
-        </div>
-        <button id="productModalAdd" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white hover:bg-accent-bright transition">
-          <i data-lucide="send" class="h-4 w-4"></i> <span data-i18n="modal_quote_btn">Solicitar por WhatsApp</span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ============================ CONTÁCTANOS ============================ -->
-<section id="contacto" class="bg-surface-muted py-16 sm:py-24 border-t border-slate-200">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-10">
-      <div class="fade-up">
-        <p data-i18n="contact_eyebrow" class="text-xs font-bold uppercase tracking-[0.18em] text-accent">Contáctanos</p>
-        <h2 data-i18n="contact_title" class="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight">Escríbenos, te respondemos pronto</h2>
-        <p data-i18n="contact_desc" class="mt-3 max-w-md text-slate-500">Cuéntanos qué necesitas y un asesor de Comercializadora T&amp;E te contactará directamente por WhatsApp.</p>
-
-        <div class="mt-7 space-y-4">
-          <a href="https://wa.me/573142588118" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-xl border border-slate-200/70 bg-white p-4 hover:border-ok/50 transition">
-            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-ok/10 text-ok"><i data-lucide="message-circle" class="h-5 w-5"></i></span>
-            <span>
-              <span data-i18n="contact_whatsapp_label" class="block text-xs font-semibold text-slate-500">WhatsApp</span>
-              <span class="block text-sm font-bold text-navy">+57 314 2588118</span>
-            </span>
-          </a>
-          <div class="flex items-center gap-3 rounded-xl border border-slate-200/70 bg-white p-4">
-            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-accent/10 text-accent"><i data-lucide="shield-check" class="h-5 w-5"></i></span>
-            <span>
-              <span data-i18n="contact_privacy_label" class="block text-xs font-semibold text-slate-500">Tus datos están protegidos</span>
-              <span data-i18n="contact_privacy_value" class="block text-sm font-bold text-navy">Uso exclusivo para atender tu solicitud</span>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <form id="contactForm" class="rounded-xl bg-white p-6 sm:p-8 shadow-md border border-slate-200/70 fade-up">
-        <div class="grid gap-4 sm:grid-cols-2">
-          <div class="sm:col-span-1">
-            <label data-i18n="contact_name_label" class="mb-1.5 block text-xs font-semibold text-slate-600">Nombre completo *</label>
-            <input id="contactName" required class="w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none" />
-          </div>
-          <div class="sm:col-span-1">
-            <label data-i18n="contact_phone_label" class="mb-1.5 block text-xs font-semibold text-slate-600">Teléfono *</label>
-            <input id="contactPhone" type="tel" required class="w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none" />
-          </div>
-          <div class="sm:col-span-2">
-            <label data-i18n="contact_email_label" class="mb-1.5 block text-xs font-semibold text-slate-600">Correo electrónico</label>
-            <input id="contactEmail" type="email" class="w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none" />
-          </div>
-          <div class="sm:col-span-2">
-            <label data-i18n="contact_subject_label" class="mb-1.5 block text-xs font-semibold text-slate-600">Asunto *</label>
-            <input id="contactSubject" required class="w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none" />
-          </div>
-          <div class="sm:col-span-2">
-            <label data-i18n="contact_message_label" class="mb-1.5 block text-xs font-semibold text-slate-600">Mensaje *</label>
-            <textarea id="contactMessage" rows="3" required class="w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none"></textarea>
-          </div>
-        </div>
-        <label class="mt-4 flex items-start gap-2.5 text-xs text-slate-500">
-          <input id="contactConsent" type="checkbox" required class="mt-0.5 h-4 w-4 shrink-0 accent-navy" />
-          <span data-i18n="contact_consent_pre">He leído y acepto la</span>
-          <button type="button" data-article="privacidad" class="font-semibold text-accent hover:underline"><span data-i18n="contact_consent_link">Política de tratamiento de datos personales</span></button>.
-        </label>
-        <button type="submit" class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white hover:bg-accent-bright transition">
-          <i data-lucide="send" class="h-4 w-4"></i> <span data-i18n="contact_submit">Enviar por WhatsApp</span>
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
-
 <!-- ============================ FOOTER ============================ -->
 <footer class="bg-navy-800 text-slate-300 border-t border-white/5">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
@@ -706,20 +389,20 @@
       <div>
         <p data-i18n="footer_nav_title" class="text-sm font-semibold text-white">Navegación</p>
         <ul class="mt-3 space-y-2 text-sm">
-          <li><a href="#catalogo" data-i18n="footer_nav_catalog" class="hover:text-white">Catálogo</a></li>
-          <li><a href="#trabajo" data-i18n="nav_trabajo" class="hover:text-white">Nuestro trabajo</a></li>
-          <li><a href="#calculadora" data-i18n="footer_nav_calc" class="hover:text-white">Calculadora de dotación</a></li>
-          <li><a href="#garantia" data-i18n="nav_garantia" class="hover:text-white">Garantía</a></li>
-          <li><a href="#testimonios" data-i18n="footer_nav_test" class="hover:text-white">Testimonios</a></li>
-          <li><a href="#contacto" data-i18n="footer_nav_quote" class="hover:text-white">Solicitar cotización</a></li>
+          <li><a href="catalogo.html" data-i18n="footer_nav_catalog" class="hover:text-white">Catálogo</a></li>
+          <li><a href="nuestro-trabajo.html" data-i18n="nav_trabajo" class="hover:text-white">Nuestro trabajo</a></li>
+          <li><a href="calculadora.html" data-i18n="footer_nav_calc" class="hover:text-white">Calculadora de dotación</a></li>
+          <li><a href="garantia.html" data-i18n="nav_garantia" class="hover:text-white">Garantía</a></li>
+          <li><a href="index.html#testimonios" data-i18n="footer_nav_test" class="hover:text-white">Testimonios</a></li>
+          <li><a href="contacto.html" data-i18n="footer_nav_quote" class="hover:text-white">Solicitar cotización</a></li>
         </ul>
       </div>
       <div>
         <p data-i18n="footer_res_title" class="text-sm font-semibold text-white">Recursos</p>
         <ul class="mt-3 space-y-2 text-sm">
-          <li><a href="#especialidades" data-i18n="footer_res_specialties" class="hover:text-white">Especialidades</a></li>
-          <li><a href="#recursos" data-i18n="footer_res_articles" class="hover:text-white">Guías y artículos</a></li>
-          <li><a href="#contacto" data-i18n="nav_contactanos" class="hover:text-white">Contáctanos</a></li>
+          <li><a href="index.html#especialidades" data-i18n="footer_res_specialties" class="hover:text-white">Especialidades</a></li>
+          <li><a href="recursos.html" data-i18n="footer_res_articles" class="hover:text-white">Guías y artículos</a></li>
+          <li><a href="contacto.html" data-i18n="nav_contactanos" class="hover:text-white">Contáctanos</a></li>
         </ul>
         <a href="https://wa.me/573142588118" target="_blank" rel="noopener"
            class="mt-4 inline-flex items-center gap-2 rounded-lg bg-ok px-4 py-2.5 text-sm font-semibold text-white hover:brightness-95 transition">
@@ -755,11 +438,6 @@
 <!-- ============================ LÓGICA JS ============================ -->
 <script src="js/config.js"></script>
 <script src="js/i18n.js"></script>
-<script src="js/catalog.js"></script>
-<script src="js/product-modal.js"></script>
-<script src="js/calculator.js"></script>
-<script src="js/articles.js"></script>
-<script src="js/contact.js"></script>
 <script src="js/chat.js"></script>
 <script src="js/ui.js"></script>
 <script src="js/testimonials.js"></script>

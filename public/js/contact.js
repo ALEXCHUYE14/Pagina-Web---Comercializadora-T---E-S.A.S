@@ -1,8 +1,9 @@
 /* =====================================================================
    CONTÁCTANOS — formulario que arma un mensaje de WhatsApp prellenado
    ===================================================================== */
-/* ---------------- Formulario de contacto ---------------- */
-document.getElementById('contactForm').addEventListener('submit', (e) => {
+/* ---------------- Formulario de contacto (solo existe en la página de Contáctanos) ---------------- */
+const contactFormEl = document.getElementById('contactForm');
+if (contactFormEl) contactFormEl.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const consent = document.getElementById('contactConsent');
