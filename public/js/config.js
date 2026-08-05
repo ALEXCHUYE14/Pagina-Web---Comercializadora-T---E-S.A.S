@@ -3,7 +3,7 @@
    ===================================================================== */
 
 /* Número de WhatsApp de la empresa, usado en cotizaciones, contacto y el botón flotante. */
-const WHATSAPP_NUMBER = '573142588118';
+const WHATSAPP_NUMBER = '573209291736';
 
 /* =====================================================================
    CONFIG SUPABASE  — rellena estas dos claves para cargar el catálogo en vivo desde base de datos.

@@ -25,8 +25,9 @@ const I18N = {
     hero_title: 'Prendas de Trabajo para tu Equipo',
     hero_desc: 'Uniformes, dotación industrial y prendas confeccionadas a la medida, pensadas para el bienestar de tu equipo y la satisfacción de tus clientes.',
     hero_cta_catalog: 'Ver catálogo', hero_cta_quote: 'Solicitar cotización',
+    hero_cta_pdf1: 'Portafolio T&amp;E (PDF)', hero_cta_pdf2: 'Catálogo de EPP (PDF)',
     hero_scroll: 'Descubre más',
-    hero_metric_meters: 'Prendas Confeccionadas', hero_metric_ontime: 'Entregas a Tiempo', hero_metric_clients: 'Empresas Atendidas',
+    hero_metric_meters: 'Prendas Confeccionadas', hero_metric_ontime: 'Entregas a Tiempo', hero_metric_clients: 'Empresa colombiana',
 
     cat_eyebrow: 'Catálogo de Dotación', cat_title: 'Prendas de trabajo disponibles',
     cat_desc: 'Filtra en tiempo real por categoría y disponibilidad, y solicita tu cotización directo por WhatsApp.',
@@ -202,8 +203,9 @@ const I18N = {
     hero_title: 'Work Garments for Your Team',
     hero_desc: 'Uniforms, industrial workwear and made-to-order garments, designed for your team’s wellbeing and your customers’ satisfaction.',
     hero_cta_catalog: 'View catalog', hero_cta_quote: 'Request a quote',
+    hero_cta_pdf1: 'T&amp;E Portfolio (PDF)', hero_cta_pdf2: 'PPE Catalog (PDF)',
     hero_scroll: 'Discover more',
-    hero_metric_meters: 'Garments Manufactured', hero_metric_ontime: 'On-time Deliveries', hero_metric_clients: 'Companies Served',
+    hero_metric_meters: 'Garments Manufactured', hero_metric_ontime: 'On-time Deliveries', hero_metric_clients: 'Colombian company',
 
     cat_eyebrow: 'Workwear Catalog', cat_title: 'Available work garments',
     cat_desc: 'Filter in real time by category and availability, and request your quote directly on WhatsApp.',

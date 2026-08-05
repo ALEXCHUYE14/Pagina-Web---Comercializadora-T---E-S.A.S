@@ -187,6 +187,6 @@ async function downloadSpecSheet(id) {
   }
 
   doc.setFontSize(8); doc.setTextColor(140);
-  doc.text(`${t('pdf_footer')} · WhatsApp +57 314 2588118`, 14, 290);
+  doc.text(`${t('pdf_footer')} · WhatsApp +57 320 929 1736`, 14, 290);
   doc.save(`ficha-tecnica-${p.sku}.pdf`);
 }

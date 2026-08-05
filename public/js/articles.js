@@ -79,12 +79,12 @@ const ARTICLES = {
     es: { title: 'Política de tratamiento de datos personales', body: [
       'Comercializadora T&E S.A.S. trata tus datos personales (nombre, teléfono, correo y mensaje) únicamente para responder tu solicitud, elaborar cotizaciones y dar seguimiento a tus pedidos, de conformidad con la Ley 1581 de 2012 y el Decreto 1377 de 2013 de Colombia.',
       'No compartimos ni vendemos tus datos a terceros. Solo se conservan mientras exista una relación comercial o el tiempo necesario para cumplir la finalidad para la que fueron entregados.',
-      'Como titular de tus datos tienes derecho a conocer, actualizar, rectificar y solicitar la supresión de tu información en cualquier momento, escribiéndonos por WhatsApp al +57 314 2588118.',
+      'Como titular de tus datos tienes derecho a conocer, actualizar, rectificar y solicitar la supresión de tu información en cualquier momento, escribiéndonos por WhatsApp al +57 320 929 1736.',
     ]},
     en: { title: 'Personal data processing policy', body: [
       'Comercializadora T&E S.A.S. processes your personal data (name, phone, email and message) solely to respond to your request, prepare quotes and follow up on your orders, in line with Colombian data protection law (Law 1581 of 2012 and Decree 1377 of 2013).',
       'We do not share or sell your data to third parties. It is kept only for as long as the commercial relationship lasts, or as needed to fulfill the purpose it was collected for.',
-      'As the data owner you can access, update, correct or request deletion of your information at any time by messaging us on WhatsApp at +57 314 2588118.',
+      'As the data owner you can access, update, correct or request deletion of your information at any time by messaging us on WhatsApp at +57 320 929 1736.',
     ]},
   },
 };
